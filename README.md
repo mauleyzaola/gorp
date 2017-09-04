@@ -702,6 +702,10 @@ use, and how to connect to your database.
 export GORP_TEST_DSN=gomysql_test/gomysql_test/abc123
 export GORP_TEST_DIALECT=mysql
 
+# Postgres example:
+export GORP_TEST_DSN="user=postgres host=localhost dbname=gorp password=nevermind sslmode=disable"
+export GORP_TEST_DIALECT=postgres
+
 # run the tests
 go test
 
