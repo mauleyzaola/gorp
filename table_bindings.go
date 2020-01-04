@@ -109,8 +109,8 @@ type bindInstance struct {
 }
 
 func (t *TableMap) bindInsert(elem reflect.Value) (bindInstance, error) {
-	if t.dbmap.Dialect==nil{
-		return bindInstance{},fmt.Errorf("dialect for dbmap has not been set")
+	if t.dbmap.Dialect == nil {
+		return bindInstance{}, fmt.Errorf("dialect for dbmap has not been set")
 	}
 	plan := &t.insertPlan
 	plan.once.Do(func() {

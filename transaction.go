@@ -31,7 +31,7 @@ func (t *Transaction) Insert(list ...interface{}) error {
 	return insert(t.dbmap, t, list...)
 }
 
-func(t *Transaction)TX()*sql.Tx{
+func (t *Transaction) TX() *sql.Tx {
 	return t.tx
 }
 
