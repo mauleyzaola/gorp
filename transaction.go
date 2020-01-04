@@ -31,6 +31,10 @@ func (t *Transaction) Insert(list ...interface{}) error {
 	return insert(t.dbmap, t, list...)
 }
 
+func(t *Transaction)TX()*sql.Tx{
+	return t.tx
+}
+
 // Update had the same behavior as DbMap.Update(), but runs in a transaction.
 func (t *Transaction) Update(list ...interface{}) (int64, error) {
 	return update(t.dbmap, t, nil, list...)
